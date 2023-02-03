@@ -3,6 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 
 import bg from "../../public/star.jpeg";
+import Navbar from "../components/Layout/Navbar";
 
 const Home: NextPage = () => {
   return (
@@ -12,7 +13,8 @@ const Home: NextPage = () => {
         <meta name="description" content="Escolha o nome do seu bebê" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="flex min-h-screen flex-col items-center justify-center">
+      <Navbar />
+      <main className="flex h-screen flex-col items-center justify-center">
         <div className="fixed z-[-1] h-screen w-screen overflow-hidden">
           <Image
             src={bg}
