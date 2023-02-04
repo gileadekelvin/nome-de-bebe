@@ -7,7 +7,7 @@ const GenderFilter = (props: GenderFilterProps) => {
 
   return (
     <div className="flex flex-col gap-2">
-      <span>Filtrar por</span>
+      <span>Me mostre nomes de</span>
       <div className="flex gap-4">
         <button
           onClick={() => setGender("M")}

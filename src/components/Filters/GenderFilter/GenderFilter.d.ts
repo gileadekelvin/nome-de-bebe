@@ -1,4 +1,6 @@
+import type { Gender } from "@prisma/client";
+
 export type GenderFilterProps = {
-  gender: string | null;
-  setGender: (gender: string | null) => void;
+  gender: Gender | null;
+  setGender: (gender: Gender | null) => void;
 };

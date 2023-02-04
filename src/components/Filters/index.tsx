@@ -1,11 +1,9 @@
-import { useState } from "react";
-
 import AlphabetFilter from "./AlphabetFilter";
 import GenderFilter from "./GenderFilter";
+import type { FilterProps } from "./Filters";
 
-const Filters = () => {
-  const [gender, setGender] = useState<string | null>(null);
-  const [letter, setLetter] = useState<string | null>("Qualquer letra");
+const Filters = (props: FilterProps) => {
+  const { gender, setGender, letter, setLetter } = props;
 
   return (
     <div className="flex items-center justify-center bg-gray-50 md:px-16">
