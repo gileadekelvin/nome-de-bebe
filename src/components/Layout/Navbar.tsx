@@ -4,9 +4,9 @@ const Navbar = () => {
   return (
     <Disclosure
       as="nav"
-      className="sticky top-0 z-50 w-full border-b border-black"
+      className="sticky top-0 z-50 w-full border-b border-black bg-[#fafafa]"
     >
-      <div className="mx-auto max-w-7xl px-2 px-8">
+      <div className="mx-auto max-w-7xl px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="flex flex-1 items-stretch justify-start">
             <a key="main" href="#" className="text-2xl font-bold text-gray-900">

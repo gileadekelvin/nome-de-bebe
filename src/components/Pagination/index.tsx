@@ -4,7 +4,7 @@ const Pagination = (props: PaginationProps) => {
   const { page, setPage, total, totalPerPage } = props;
 
   return (
-    <div className="mt-8 flex items-center justify-between pb-3">
+    <div className="mt-4 flex items-center justify-between pb-3">
       <div className="sm:flex sm:flex-1 sm:items-center sm:justify-between">
         <div>
           <div className="flex items-center">
@@ -23,19 +23,28 @@ const Pagination = (props: PaginationProps) => {
                 d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"
               ></path>
             </svg>
-            <span className="text-sm text-gray-700 pl-1">
+            <span className="pl-1 text-sm text-gray-700">
               Dados do censo de 2010
             </span>
           </div>
-          <p className="text-sm text-gray-700">
-            Mostrando&nbsp;de&nbsp;
-            <span className="font-medium">{page * totalPerPage + 1}</span>
-            &nbsp;a&nbsp;
-            <span className="font-medium">{(page + 1) * totalPerPage}</span>
-            &nbsp;de&nbsp;
-            <span className="font-medium">{total}</span>
-            &nbsp;resultados
-          </p>
+
+          {!!total ? (
+            <p className="text-sm text-gray-700">
+              Mostrando&nbsp;de&nbsp;
+              <span className="font-medium">{page * totalPerPage + 1}</span>
+              &nbsp;a&nbsp;
+              <span className="font-medium">
+                {!!total
+                  ? Math.min((page + 1) * totalPerPage, total ?? 0)
+                  : null}
+              </span>
+              &nbsp;de&nbsp;
+              <span className="font-medium">{total}</span>
+              &nbsp;resultados
+            </p>
+          ) : (
+            <p className="text-sm text-gray-700">...</p>
+          )}
         </div>
         <div>
           <nav

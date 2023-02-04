@@ -19,7 +19,7 @@ const Home: NextPage = () => {
       </Head>
       <div
         className="container mx-auto flex flex-col justify-center
-      lg:flex-row lg:gap-32 lg:pt-16"
+      lg:flex-row lg:gap-32 lg:pt-4"
       >
         <div className="lg:basis-1/3">
           <Filters
@@ -29,7 +29,7 @@ const Home: NextPage = () => {
             setLetter={setLetter}
           />
         </div>
-        <div className="px-8 lg:basis-2/3 lg:px-0">
+        <div className="px-4 lg:basis-2/3 lg:px-8 lg:px-0">
           <Names gender={gender} letter={letter} />
         </div>
       </div>
