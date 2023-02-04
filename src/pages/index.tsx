@@ -29,7 +29,7 @@ const Home: NextPage = () => {
             setLetter={setLetter}
           />
         </div>
-        <div className="lg:basis-2/3">
+        <div className="px-8 lg:basis-2/3 lg:px-0">
           <Names gender={gender} letter={letter} />
         </div>
       </div>
