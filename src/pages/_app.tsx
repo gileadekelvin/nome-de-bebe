@@ -9,6 +9,7 @@ const montserrat = Montserrat({ subsets: ["latin"] });
 import { api } from "../utils/api";
 
 import "../styles/globals.css";
+import Layout from "../components/Layout/Layout";
 
 const MyApp: AppType<{ session: Session | null }> = ({
   Component,
@@ -16,8 +17,10 @@ const MyApp: AppType<{ session: Session | null }> = ({
 }) => {
   return (
     <SessionProvider session={session}>
-      <main className={montserrat.className}>
-        <Component {...pageProps} />
+      <main className={(montserrat.className, "min-h-screen bg-[#fafafa]")}>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
       </main>
     </SessionProvider>
   );
