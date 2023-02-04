@@ -1,15 +1,20 @@
 import type { NameProps } from "./Name";
+import Son from "./Son";
 
 const formatter = Intl.NumberFormat("en", { notation: "compact" });
+const MY_SONS = ["PEDRO", "JOAQUIM"];
 
 const Name = (props: NameProps) => {
   const { name } = props;
 
   return (
     <div className="w-full rounded-lg border border-gray-200 bg-white p-6">
-      <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">
-        {name.name}
-      </h5>
+      <div className="flex flex-row">
+        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+          {name.name}
+        </h5>
+        {MY_SONS.includes(name.name) && <Son />}
+      </div>
 
       <p className="mb-3 text-sm text-gray-700">
         <span className="font-bold">Variações: </span>
@@ -47,7 +52,7 @@ const Name = (props: NameProps) => {
             <path
               fillRule="evenodd"
               d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-              clip-rule="evenodd"
+              clipRule="evenodd"
             ></path>
           </svg>
         </a>
