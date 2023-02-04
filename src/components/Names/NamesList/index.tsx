@@ -1,5 +1,6 @@
 import { api } from "../../../utils/api";
 import Loading from "../../Loading";
+import Name from "../Name";
 import type { NamesListProps } from "./NamesList";
 
 const NamesList = (props: NamesListProps) => {
@@ -15,11 +16,11 @@ const NamesList = (props: NamesListProps) => {
   if (!namesQuery.data) return <Loading />;
 
   return (
-    <>
+    <div className="flex flex-col gap-4">
       {namesQuery.data?.map((name) => {
-        return <div key={name.id}>{name.name}</div>;
+        return <Name key={name.id} name={name} />;
       })}
-    </>
+    </div>
   );
 };
 
