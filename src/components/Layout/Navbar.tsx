@@ -1,4 +1,5 @@
 import { Disclosure } from "@headlessui/react";
+import Link from "next/link";
 
 const Navbar = () => {
   return (
@@ -6,12 +7,16 @@ const Navbar = () => {
       as="nav"
       className="sticky top-0 z-50 w-full border-b border-black bg-[#fafafa]"
     >
-      <div className="mx-auto max-w-7xl px-8">
+      <div className="mx-auto px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="flex flex-1 items-stretch justify-start">
-            <a key="main" href="#" className="text-2xl font-bold text-gray-900">
+            <Link
+              key="main"
+              href="/"
+              className="md:pl-32 text-2xl font-bold text-gray-900"
+            >
               Nome de bebê
-            </a>
+            </Link>
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
             <a
