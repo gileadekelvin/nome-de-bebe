@@ -18,10 +18,10 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div
-        className="container mx-auto flex flex-col items-center justify-center
-      gap-32 md:flex-row md:pt-32"
+        className="container mx-auto flex flex-col justify-center
+      lg:flex-row lg:gap-32 lg:pt-16"
       >
-        <div className="md:basis-1/3">
+        <div className="lg:basis-1/3">
           <Filters
             gender={gender}
             setGender={setGender}
@@ -29,7 +29,7 @@ const Home: NextPage = () => {
             setLetter={setLetter}
           />
         </div>
-        <div className="md:basis-2/3">
+        <div className="lg:basis-2/3">
           <Names gender={gender} letter={letter} />
         </div>
       </div>
