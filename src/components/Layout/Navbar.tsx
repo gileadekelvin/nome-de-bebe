@@ -4,7 +4,7 @@ const Navbar = () => {
   return (
     <Disclosure
       as="nav"
-      className="sticky top-0 z-50 w-full border-b-2 border-black bg-white"
+      className="sticky top-0 z-50 w-full border-b border-black"
     >
       <div className="mx-auto max-w-7xl px-2 px-8">
         <div className="relative flex h-16 items-center justify-between">

@@ -12,11 +12,14 @@ const Home: NextPage = () => {
         <meta name="description" content="Escolha o nome do seu bebê" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="container mx-auto flex items-center justify-center gap-32 py-32 md:flex-row">
-        <div className="basis-1/3">
+      <div
+        className="container mx-auto flex flex-col items-center justify-center
+      gap-32 md:flex-row md:py-32"
+      >
+        <div className="md:basis-1/3">
           <Filters />
         </div>
-        <div className="basis-2/3">
+        <div className="md:basis-2/3">
           <Names />
         </div>
       </div>
