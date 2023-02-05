@@ -13,19 +13,19 @@ const Navbar = () => {
             <Link
               key="main"
               href="/"
-              className="md:pl-32 text-2xl font-bold text-gray-900"
+              className="text-2xl font-bold text-gray-900 md:pl-32"
             >
               Nome de bebê
             </Link>
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-            <a
+            <Link
               key="about"
-              href="#"
-              className="rounded-sm px-3 py-2 text-sm font-medium text-gray-900 hover:bg-black hover:text-white"
+              href="/about"
+              className="rounded-md px-3 py-2 text-sm font-medium text-gray-900 hover:bg-black hover:text-white"
             >
               Sobre
-            </a>
+            </Link>
           </div>
         </div>
       </div>
