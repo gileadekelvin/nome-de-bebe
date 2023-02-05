@@ -1,5 +1,8 @@
 import { Disclosure } from "@headlessui/react";
+import Image from "next/image";
 import Link from "next/link";
+
+import logo from "../../../public/logo.png";
 
 const Navbar = () => {
   return (
@@ -9,11 +12,12 @@ const Navbar = () => {
     >
       <div className="mx-auto px-8">
         <div className="relative flex h-16 items-center justify-between">
-          <div className="flex flex-1 items-stretch justify-start">
+          <div className="flex flex-row justify-start md:pl-32">
+            <Image src={logo} alt="Logo" width={32} />
             <Link
               key="main"
               href="/"
-              className="text-2xl font-bold text-gray-900 md:pl-32"
+              className="text-2xl font-bold text-gray-900 pl-2"
             >
               Nome de bebê
             </Link>
