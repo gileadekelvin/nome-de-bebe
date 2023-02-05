@@ -6,7 +6,7 @@ const About: NextPage = () => {
     <div>
       <Head>
         <title>Sobre</title>
-        <meta name="description" content="Sobre o site Nome de Bebê" />
+        <meta name="description" content="Sobre o site Nome do Bebê" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="container mx-auto mt-8 flex max-w-4xl flex-col justify-center px-8">

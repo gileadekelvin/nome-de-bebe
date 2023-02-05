@@ -14,7 +14,7 @@ const Home: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Nome de bebê</title>
+        <title>Nome do bebê</title>
         <meta name="description" content="Escolha o nome do seu bebê" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

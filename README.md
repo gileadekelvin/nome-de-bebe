@@ -1,6 +1,6 @@
-# Nome de Bebê
+# Nome do Bebê
 
-This project will help you to decide your next baby name! Nome de bebê means baby's name in portuguese.
+This project will help you to decide your next baby name! Nome do bebê means baby's name in portuguese.
 
 ### About the language
 

@@ -19,7 +19,7 @@ const Navbar = () => {
               href="/"
               className="text-2xl font-bold text-gray-900 pl-2"
             >
-              Nome de bebê
+              Nome do bebê
             </Link>
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
