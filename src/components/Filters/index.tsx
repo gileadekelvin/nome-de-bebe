@@ -13,7 +13,7 @@ const Filters = (props: FilterProps) => {
         <div className="animation-delay-2000 absolute top-0 h-[240px] w-[240px] animate-blob rounded-full bg-yellow-300 opacity-70 mix-blend-multiply blur-xl filter md:-right-4 md:h-[320px] md:w-[320px]"></div>
         <div className="animation-delay-4000 absolute -bottom-8 h-[240px] w-[240px] animate-blob rounded-full bg-pink-300 opacity-70 mix-blend-multiply blur-xl filter md:left-20 md:h-[320px] md:w-[320px]"></div>
         <div className="relative m-4 space-y-4 md:m-8">
-          <div className="flex min-w-[320px] flex-col gap-6 rounded-lg border border-gray-600 bg-white p-7">
+          <div className="flex min-w-[320px] md:min-w-[400px] flex-col gap-6 rounded-lg border border-gray-600 bg-white p-7">
             <GenderFilter gender={gender} setGender={setGender} />
             <AlphabetFilter letter={letter} setLetter={setLetter} />
             <SearchFilter setQuery={setQuery} />

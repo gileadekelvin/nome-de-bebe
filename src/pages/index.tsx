@@ -20,7 +20,7 @@ const Home: NextPage = () => {
       </Head>
       <div
         className="container mx-auto flex flex-col justify-center
-      lg:flex-row lg:gap-32 lg:pt-4"
+      lg:flex-row lg:gap-8 lg:pt-4"
       >
         <div className="lg:basis-1/3">
           <Filters

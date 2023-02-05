@@ -17,7 +17,7 @@ const NamesList = (props: NamesListProps) => {
   if (!namesQuery.data) return <Loading />;
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 mb-8">
       {namesQuery.data?.map((name) => {
         return <Name key={name.id} name={name} />;
       })}
