@@ -4,11 +4,12 @@ import Name from "../Name";
 import type { NamesListProps } from "./NamesList";
 
 const NamesList = (props: NamesListProps) => {
-  const { gender, letter, page, resultsPerPage } = props;
+  const { gender, letter, query, page, resultsPerPage } = props;
 
   const namesQuery = api.names.getNames.useQuery({
     firstLetter: letter !== "Qualquer letra" ? letter : null,
     gender,
+    query,
     page,
     size: resultsPerPage,
   });

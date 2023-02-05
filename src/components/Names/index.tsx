@@ -8,18 +8,19 @@ import NamesList from "./NamesList";
 const RESULTS_PER_PAGE = 20;
 
 const Names = (props: NamesProps) => {
-  const { gender, letter } = props;
+  const { gender, letter, query } = props;
 
   const [page, setPage] = useState(0);
 
   const totalCount = api.names.getTotal.useQuery({
     firstLetter: letter !== "Qualquer letra" ? letter : null,
     gender,
+    query,
   });
 
   useEffect(() => {
     setPage(0);
-  }, [gender, letter]);
+  }, [gender, letter, query]);
 
   return (
     <>
@@ -32,6 +33,7 @@ const Names = (props: NamesProps) => {
       <NamesList
         gender={gender}
         letter={letter}
+        query={query}
         page={page}
         resultsPerPage={RESULTS_PER_PAGE}
       />

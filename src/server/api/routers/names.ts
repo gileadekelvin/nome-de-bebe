@@ -9,6 +9,7 @@ export const namesRouter = createTRPCRouter({
       z.object({
         firstLetter: z.string().nullish(),
         gender: z.nativeEnum(Gender).nullish(),
+        query: z.string().nullish(),
         page: z.number(),
         size: z.number().default(10),
       })
@@ -28,6 +29,13 @@ export const namesRouter = createTRPCRouter({
                 classification: input.gender,
               }
             : {}),
+          ...(input.query && input.query.length > 0
+            ? {
+                name: {
+                  contains: input.query,
+                },
+              }
+            : {}),
         },
         orderBy: {
           frequency_total: "desc",
@@ -41,6 +49,7 @@ export const namesRouter = createTRPCRouter({
       z.object({
         firstLetter: z.string().nullish(),
         gender: z.nativeEnum(Gender).nullish(),
+        query: z.string().nullish(),
       })
     )
     .query(({ input, ctx }) => {
@@ -56,6 +65,13 @@ export const namesRouter = createTRPCRouter({
           ...(input.gender
             ? {
                 classification: input.gender,
+              }
+            : {}),
+          ...(input.query && input.query.length > 0
+            ? {
+                name: {
+                  contains: input.query,
+                },
               }
             : {}),
         },

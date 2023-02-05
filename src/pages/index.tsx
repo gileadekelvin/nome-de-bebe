@@ -9,6 +9,7 @@ import Names from "../components/Names";
 const Home: NextPage = () => {
   const [gender, setGender] = useState<Gender | null>(null);
   const [letter, setLetter] = useState<string | null>("Qualquer letra");
+  const [query, setQuery] = useState<string | null>("");
 
   return (
     <div>
@@ -27,10 +28,11 @@ const Home: NextPage = () => {
             setGender={setGender}
             letter={letter}
             setLetter={setLetter}
+            setQuery={setQuery}
           />
         </div>
         <div className="px-4 lg:basis-2/3 lg:px-8">
-          <Names gender={gender} letter={letter} />
+          <Names gender={gender} letter={letter} query={query} />
         </div>
       </div>
     </div>

@@ -5,4 +5,5 @@ export type FilterProps = {
   setGender: (letter: Gender | null) => void;
   letter: string | null;
   setLetter: (letter: string | null) => void;
+  setQuery: (query: string | null) => void;
 };
