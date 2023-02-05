@@ -31,7 +31,7 @@ export const namesRouter = createTRPCRouter({
             : {}),
           ...(input.query && input.query.length > 0
             ? {
-                name: {
+                names: {
                   contains: input.query,
                 },
               }
@@ -69,7 +69,7 @@ export const namesRouter = createTRPCRouter({
             : {}),
           ...(input.query && input.query.length > 0
             ? {
-                name: {
+                names: {
                   contains: input.query,
                 },
               }
