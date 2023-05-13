@@ -2,6 +2,8 @@
 
 This project will help you to decide your next baby name! Nome do bebê means baby's name in portuguese.
 
+This app was inspired by my two sons: Pedro e Joaquim!
+
 ### About the language
 
 The names will be suggested in portuguese and the main language for the site will be in portuguese. But the language that will be used in this repository will be english.
