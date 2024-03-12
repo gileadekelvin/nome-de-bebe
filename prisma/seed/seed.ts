@@ -5,6 +5,14 @@ import path from "path";
 import csvtojson from "csvtojson";
 import { prisma } from "../../src/server/db";
 
+const importRow = async (row: any, index: number, total: number) => {
+  console.log(`opa ${index + 1}/${total}`);
+  const insertedRow = await prisma.names.create({
+    data: row,
+  });
+  return insertedRow;
+};
+
 async function main() {
   const csvFilePath = path.join(__dirname, ".", "data", "grupos.csv");
   const names = await csvtojson().fromFile(csvFilePath);
@@ -19,7 +27,13 @@ async function main() {
     };
     return parsedRow;
   });
-  await prisma.names.createMany({ data: parsedData, skipDuplicates: true });
+
+  await Promise.all(
+    parsedData.map(async (row, index) => {
+      const insertedRow = await importRow(row, index, parsedData.length);
+      return insertedRow;
+    })
+  );
 }
 
 main()

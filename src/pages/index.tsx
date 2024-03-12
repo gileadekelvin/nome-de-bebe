@@ -1,13 +1,12 @@
 import { type NextPage } from "next";
 import Head from "next/head";
 import { useState } from "react";
-import type { Gender } from "@prisma/client";
 
 import Filters from "../components/Filters";
 import Names from "../components/Names";
 
 const Home: NextPage = () => {
-  const [gender, setGender] = useState<Gender | null>(null);
+  const [gender, setGender] = useState<string | null>(null);
   const [letter, setLetter] = useState<string | null>("Qualquer letra");
   const [query, setQuery] = useState<string | null>("");
 

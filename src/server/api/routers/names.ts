@@ -1,5 +1,4 @@
 import { z } from "zod";
-import { Gender } from "@prisma/client";
 
 import { createTRPCRouter, publicProcedure } from "../trpc";
 
@@ -8,7 +7,7 @@ export const namesRouter = createTRPCRouter({
     .input(
       z.object({
         firstLetter: z.string().nullish(),
-        gender: z.nativeEnum(Gender).nullish(),
+        gender: z.string().nullish(),
         query: z.string().nullish(),
         page: z.number(),
         size: z.number().default(10),
@@ -48,7 +47,7 @@ export const namesRouter = createTRPCRouter({
     .input(
       z.object({
         firstLetter: z.string().nullish(),
-        gender: z.nativeEnum(Gender).nullish(),
+        gender: z.string().nullish(),
         query: z.string().nullish(),
       })
     )
